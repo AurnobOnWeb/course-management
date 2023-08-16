@@ -12,7 +12,7 @@ class BatchCollectingController extends Controller
     public function getBatch(Request $request, $course)
     {
         $batches = Batch::where('course_id', $course)->get();
-        $course = course::find($course); // Assuming you have a "Course" model
+        $course = course::find($course); 
 
         return response()->json([
             'batches' => $batches,
